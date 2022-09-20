@@ -6,9 +6,9 @@ export default class Item extends Component {
     const { image, name, price } = this.props.propItem;
     return (
       <div className="card">
-        <img src={image} alt="" />
+        <img src={image} alt="" width={200} height={200} />
         <div className="card-body">
-          <h1>{name}</h1>
+          <h4>{name}</h4>
           <p>{price}</p>
           <button className="btn btn-primary">add to cart</button>
         </div>

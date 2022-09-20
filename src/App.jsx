@@ -11,6 +11,9 @@ import HeaderLogin from "./StateDemo/HeaderLogin";
 import StateDemo from "./StateDemo/StateDemo";
 import StyleDemo from "./StyleDemo/StyleDemo";
 import ShoesApp from "./Props/ShoesApp/ShoesApp";
+import BaiTapXemChiTiet from "./Props/BaiTapXemChiTiet/BaiTapXemChiTiet";
+import ExerciseCarStore from "./Props/ExserciseCarStore/ExerciseCarStore";
+import DemoChildrenProps from "./Props/DemoChildrenProps/DemoChildrenProps";
 export default function App() {
   return (
     <div>
@@ -31,7 +34,9 @@ export default function App() {
       {/* <StateDemo /> */}
       {/* <RenderArrComponent /> */}
       {/* <ProductList /> */}
-      <ShoesApp />
+      {/* <BaiTapXemChiTiet /> */}
+      {/* <ExerciseCarStore /> */}
+      <DemoChildrenProps />
     </div>
   );
 }
