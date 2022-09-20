@@ -1,0 +1,6 @@
+.color-red {
+  color: red;
+}
+/*
+Xử lí link hình trong file css thì dùng absolute link (đường dẫn tương đối theo cấu trúc thư mục, không được vượt quá thư mục src)
+*/
