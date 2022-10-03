@@ -14,29 +14,17 @@ import ShoesApp from "./Props/ShoesApp/ShoesApp";
 import BaiTapXemChiTiet from "./Props/BaiTapXemChiTiet/BaiTapXemChiTiet";
 import ExerciseCarStore from "./Props/ExserciseCarStore/ExerciseCarStore";
 import DemoChildrenProps from "./Props/DemoChildrenProps/DemoChildrenProps";
+import { Outlet } from "react-router-dom";
+import HeaderHome from "./Components/HeaderHome/HeaderHome";
 export default function App() {
   return (
     <div>
-      {/* <Home />
-      <div className="d-flex">
-        <div className="w-25">
-          <Nav />
-        </div>
-        <div className="w-75">
-          <Content />
-        </div>
+      <HeaderHome />
+      {/** //Outlet là vị trí hiển thị Components Route con */}
+      <div style={{ minHeight: "800px" }}>
+        <Outlet />
       </div>
-      <Footer /> */}
-      {/* <DemoDataBinding /> */}
-      {/* <HandleEvent /> */}
-      {/* <HeaderLogin /> */}
-      {/* <StyleDemo /> */}
-      {/* <StateDemo /> */}
-      {/* <RenderArrComponent /> */}
-      {/* <ProductList /> */}
-      {/* <BaiTapXemChiTiet /> */}
-      {/* <ExerciseCarStore /> */}
-      <DemoChildrenProps />
+      <footer>Footer</footer>
     </div>
   );
 }
