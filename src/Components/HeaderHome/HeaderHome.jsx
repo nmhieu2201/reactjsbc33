@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
-export default class HeaderHome extends Component {
+class HeaderHome extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -96,22 +97,41 @@ export default class HeaderHome extends Component {
                 Redux - ChonXe
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link bg-warning " : "nav-link"
+                }
+                to="/products"
+                style={({ isActive }) => (isActive ? { color: "red" } : {})}
+              >
+                Demo - Giỏ Hàng
+              </NavLink>
+            </li>
           </ul>
           <form className="d-flex my-2 my-lg-0">
-            <input
-              className="form-control me-sm-2"
-              type="text"
-              placeholder="Search"
-            />
-            <button
-              className="btn btn-outline-success my-2 my-sm-0"
-              type="submit"
+            <NavLink
+              className="nax-item text-light px-5"
+              style={{ textDecoration: "none" }}
+              to={"cart"}
             >
-              Search
-            </button>
+              <i className="fa fa-cart-plus"></i>({this.props.cart.length})
+              {this.props.cart
+                .reduce((tt, item, index) => {
+                  return (tt += item.quantity * item.price);
+                }, 0)
+                .toLocaleString()}
+              $
+            </NavLink>
           </form>
         </div>
       </nav>
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  cart: state.cartReducer.cart,
+});
+
+export default connect(mapStateToProps)(HeaderHome);

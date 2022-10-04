@@ -14,6 +14,8 @@ import { Provider } from "react-redux";
 import { store } from "./Components/redux/configStore";
 import TangGiamFontSize from "./pages/DemoRedux/TangGiamFontSize/TangGiamFontSize";
 import BaiTapChonXeRedux from "./pages/DemoRedux/BaiTapChonXeRedux/BaiTapChonXeRedux";
+import Products from "./pages/Products/Products";
+import Cart from "./pages/Products/Cart";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
@@ -30,6 +32,8 @@ root.render(
           <Route path="hookstate" element={<HookUseState />}></Route>
           <Route path="reactlifecycle" element={<ReactLifecicle />}></Route>
           <Route path="baitapchonxe" element={<BaiTapChonXeRedux />}></Route>
+          <Route path="products" element={<Products />}></Route>
+          <Route path="cart" element={<Cart />}></Route>
           <Route
             path="tanggiamfont"
             element={<TangGiamFontSize />}
